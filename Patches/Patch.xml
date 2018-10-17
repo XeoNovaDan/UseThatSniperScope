@@ -1,0 +1,26 @@
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>*/ThingDef[defName="Gun_SniperRifle"]/equippedStatOffsets</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>*/ThingDef[defName="Gun_SniperRifle"]</xpath>
+                <value>
+                    <equippedStatOffsets/>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Gun_SniperRifle"]/equippedStatOffsets</xpath>
+        <value>
+            <ShootingAccuracyPawn>5.0</ShootingAccuracyPawn>
+        </value>
+    </Operation>
+
+</Patch>
